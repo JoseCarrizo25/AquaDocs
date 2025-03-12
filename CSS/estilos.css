@@ -1,0 +1,434 @@
+body {
+    font-size: .875rem;
+    background-color: rgb(234, 229, 222);
+  }
+  
+
+  
+ /*
+   * Sidebar
+   */
+  
+   .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Para que quede por encima de otros elementos */
+    padding: 48px 0 0; /* Espaciado para la altura de la navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); /* Sombra suave */
+    background-color: #f0f4f7; /* Fondo suave */
+    border-right: 1px solid #ddd; /* Borde derecho */
+    transition: width 0.3s ease; /* Transición suave en el tamaño */
+  }
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+      top: 5rem;
+    }
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  
+/* Estilo para los íconos */
+.nav-link span {
+  margin-right: 8px; /* Añadir espacio entre el ícono y el texto */
+}
+
+
+/* Para los botones dropdown, asegurarse de que el ícono esté alineado correctamente */
+.sidebar .dropdown-btn span {
+  margin-right: 8px;
+  vertical-align: middle; /* Asegura que el ícono y el texto estén alineados */
+}
+
+/* Estilo de los íconos en el menú desplegable */
+.sidebar .dropdown-container .dropdown-item span {
+  margin-right: 8px;
+}
+
+  .sidebar .nav-link {
+    font-weight: 500;
+  color: #130a0a; /* Color de texto más suave */
+  padding: 12px 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 5px; /* Espacio entre enlaces */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+/* Efecto hover en los enlaces */
+.sidebar .nav-link:hover {
+  background-color: #007bff; /* Fondo azul claro en hover */
+  color: white; /* Texto blanco en hover */
+}
+
+/* Estilo de los iconos */
+.sidebar .nav-link .feather {
+  margin-right: 10px;
+  color: #000000;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover en los iconos */
+.sidebar .nav-link:hover .feather{
+  color: white; /* Texto blanco en hover */
+}
+
+/* Estilo del encabezado del sidebar */
+.sidebar-heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 20px; /* Espaciado superior */
+  margin-bottom: 10px; /* Espaciado inferior */
+  color: #444; /* Color más oscuro para los encabezados */
+}
+
+/* Hacer que el sidebar sea scrolleable cuando el contenido sobrepase la pantalla */
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: 100%; /* El sidebar ocupará toda la altura de la pantalla */
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Desplazamiento vertical */
+  
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+  
+    /* Estilo para el botón del dropdown */
+    .sidebar .dropdown-btn {
+      text-decoration: none;
+      display: block;
+      border: none;
+      background: none;
+      width:100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+    
+    /* Estilo para la lista del dropdown */
+    .sidebar .dropdown-container {
+      display: none; /* Ocultar por defecto */
+      flex-direction: column; /* Alinear las opciones en columna */
+      align-items: flex-start; /* Alinear los elementos al inicio */
+      padding-left: 20px; /* Margen desde el borde izquierdo */
+    }
+    
+    .sidebar .dropdown-container .dropdown-item {
+      padding: 8px 10px; /* Espaciado interno */
+      border:solid 1px orange;
+      background-color: rgb(234, 229, 222); /* Color de fondo */
+      color: #130a0a; /* Color del texto */
+      text-decoration: none; /* Sin subrayado */
+      border-radius: 4px; /* Bordes redondeados */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    }
+    
+    .sidebar .dropdown-container .dropdown-item:hover {
+      background-color: #007bff; /* Fondo al pasar el mouse */
+      color: white; /* Texto al pasar el mouse */
+    }
+/* Posicionamiento del ícono caret */
+.sidebar .dropdown-btn .caret {
+  float: right; /* Alinea a la derecha */
+  transition: transform 0.3s ease; /* Animación de rotación */
+}
+
+/* Rotación de la flecha al activar */
+.sidebar .dropdown-btn.active .caret {
+  transform: rotate(180deg); /* Gira la flecha hacia arriba */
+}
+
+
+    /* Icono caret en el botón */
+    .sidebar .dropdown-btn .caret {
+      float: right;
+    }
+    
+    /* Estilo cuando se activa el dropdown */
+    .sidebar .dropdown-btn.active + .dropdown-container {
+      display: block;
+    }
+    
+    
+    
+
+
+
+
+
+  /*
+   * Navbar
+   */
+  
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  }
+  
+  .navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+  }
+  
+  .navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+    border-radius: 10px;
+    border: 2px solid orange;
+  }
+  
+  .form-control-dark {
+    color: #fff;
+    background-color: rgb(194, 190, 190);
+    border-color: rgba(255, 255, 255, .1);
+  
+  }
+  
+  .form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+  
+  
+  .border-bottom {
+      border-bottom: 1px solid rgb(111, 74, 3) !important;
+  }
+  
+  
+  
+  
+  .card{
+    border: 2px solid orange;
+    border-radius: 2em;
+    
+  }
+  
+  .card-img-top{
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+  }
+  
+  .card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #notificador{
+    color: #74C0FC;
+    background-color: transparent;
+    border:solid 1px #74C0FC;
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    font-weight: 500;
+  }
+  
+  #notificador:hover {
+    background-color: #74C0FC;
+    color : white;
+  }
+
+
+  .table tr{
+    background-color: #fff;
+  border: orange 2px solid;
+  }
+
+
+
+
+/* ESTILO DEL FORM */
+  /* Estilos personalizados para el formulario */
+.formulario-usuario {
+  background-color: #fff; /* Fondo blanco para el formulario */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para las etiquetas del formulario */
+.formulario-usuario label {
+  font-weight: 600; /* Etiquetas en negrita */
+  font-size: 1rem; /* Tamaño de texto adecuado */
+  color: #333; /* Color del texto */
+}
+
+/* Estilos para los campos de entrada (input) */
+.formulario-usuario input {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc; /* Borde gris claro */
+  width: 100%; /* Para que ocupe todo el ancho del contenedor */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  margin-bottom: 20px; /* Espaciado entre los campos */
+}
+
+.formulario-usuario input:focus {
+  border-color: #74C0FC; /* Cambia el borde a azul claro al enfocarse */
+  box-shadow: 0 0 0 2px rgba(116, 192, 252, 0.3); /* Añade un ligero resplandor */
+}
+
+/* Estilos para el botón de guardar */
+.formulario-usuario button[type="submit"] {
+  background-color: #74C0FC; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 1.2rem; /* Tamaño de texto */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Estilo cuando el botón es hover */
+.formulario-usuario button[type="submit"]:hover {
+  background-color: #1e90ff; /* Color más oscuro al hacer hover */
+}
+
+
+/* ESTILO MENSAJE DE ERROR */
+
+    /* Estilos personalizados para los mensajes de error */
+    .notification.is-danger {
+      background-color: #f8d7da; /* Fondo rojo suave */
+      border-color: #f5c6cb; /* Borde rojo claro */
+      color: #721c24; /* Texto rojo oscuro */
+      border-radius: 10px; /* Bordes redondeados */
+      padding: 15px;
+      margin-bottom: 20px; /* Espaciado inferior */
+      font-size: 1rem; /* Tamaño de fuente adecuado */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+    
+    /* Estilo para el título del mensaje */
+    .notification.is-danger strong {
+      font-weight: bold;
+      font-size: 1.1rem; /* Un poco más grande para resaltar el título */
+    }
+    
+    /* Estilos cuando el mensaje tiene más de una línea */
+    .notification.is-danger p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    
+    /* Transición suave para el mensaje */
+    .notification.is-danger {
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    /* Estilo al pasar el ratón sobre el mensaje (hover) */
+    .notification.is-danger:hover {
+      background-color: #f5c6cb; /* Color más oscuro al hacer hover */
+      opacity: 0.9;
+    }
+    
+/* Personalización de tabla */
+.table {
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.table thead th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+.table tbody td {
+  padding: 12px;
+}
+
+/* Botones */
+.btn {
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
+.btn-success:hover {
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 4px 6px rgba(40, 167, 69, 0.4);
+}
+.btn-danger:hover {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0 4px 6px rgba(220, 53, 69, 0.4);
+}
+.btn-primary {
+  background-color: #0056b3;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #004085;
+}
+
+/* Paginación */
+.pagination .page-item .page-link {
+  color: #007bff;
+  border-radius: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+.pagination .page-item.disabled .page-link {
+  background-color: #f8f9fa;
+  color: rgb(106, 100, 100);
+  opacity: 0.6; /* Ajusta la opacidad para deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor al estilo "prohibido" */
+}
+.pagination .page-item .page-link:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.pagination .page-item.disabled .page-link:hover {
+  background-color: #f8f9fa; /* Evita que cambie de color al pasar el cursor */
+  color: rgb(106, 100, 100); /* Mantén el color deshabilitado */
+}
+/* Contenedor */
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+h1.h2 {
+  color: #0056b3;
+  font-weight: bold;
+}

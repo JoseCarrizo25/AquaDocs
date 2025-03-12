@@ -1,0 +1,242 @@
+* {
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total de los elementos */
+    font-family: 'Open Sans', sans-serif; /* Establece la fuente para todo el documento */
+}
+
+html, body {
+    max-width: 100%; /* Asegura que el ancho máximo sea el 100% de la pantalla */
+    height: auto; /* La altura se ajusta automáticamente al contenido */
+    margin: 0; /* Elimina los márgenes por defecto */
+    display: flex; /* Utiliza Flexbox para alinear los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding-top: 100px; /* Espacio superior para que el contenido no quede pegado al borde */
+    padding-bottom: 40px; /* Espacio inferior para evitar que el contenido quede pegado al borde */
+    background-color: #b3c5d4; /* Establece un color de fondo para la página */
+}
+
+.text-center{
+    overflow: hidden;
+    width: 100%; 
+    height: 100%;
+}
+
+.form-signin {
+    width: 100%; /* El formulario ocupará el 100% del contenedor */
+    max-width: 330px; /* El formulario tendrá un ancho máximo de 330px */
+    padding: 15px; /* Añade un padding interno de 15px */
+    margin: auto; /* Centra el formulario en la página */
+    z-index: 1; /* Asegura que el formulario esté por encima de otros elementos */
+    text-align: center; /* Centra el texto dentro del formulario */
+}
+
+.form-signin .checkbox {
+    font-weight: 400; /* Establece un peso normal para el texto de la casilla de verificación */
+}
+
+.form-signin .form-control {
+    position: relative; /* Establece la posición relativa para los controles del formulario */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
+    height: auto; /* Ajusta la altura de los inputs según su contenido */
+    padding: 10px; /* Añade un padding de 10px */
+    font-size: 16px; /* Establece el tamaño de la fuente de los inputs */
+}
+
+.form-signin .form-control:focus {
+    z-index: 2; /* Asegura que el input tenga prioridad cuando está enfocado */
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px; /* Elimina el margen inferior para los inputs de correo */
+}
+
+.form-signin input[type="password"] {
+    margin-top: 5px; /* Añade un margen superior a los inputs de contraseña */
+}
+
+#botonSesion {
+    background-color: orange; /* Establece un color de fondo naranja para el botón de sesión */
+}
+
+.userInput {
+    display: grid; /* Utiliza Grid Layout para organizar los elementos de entrada */
+    grid-template-columns: 1fr 5fr; /* Define dos columnas, una más pequeña (icono) y una más grande (input) */
+    gap: 10px; /* Añade un espacio de 10px entre los elementos de la cuadrícula */
+    margin-bottom: 15px; /* Añade un margen inferior a cada grupo de input */
+}
+
+.mb-4 {
+    width: 100px; /* Establece un ancho fijo para el logo */
+    height: auto; /* La altura se ajusta automáticamente según el ancho */
+}
+
+.square {
+    position: relative; /* Posiciona el contenedor de los círculos de manera relativa para que los elementos dentro puedan posicionarse de forma absoluta */
+    margin: 0 10px; /* Añade un margen de 10px a la izquierda y derecha del contenedor */
+    width: 600px; /* Establece un ancho fijo de 600px para el contenedor */
+    height: 600px; /* Establece una altura fija de 600px para el contenedor */
+    display: flex; /* Utiliza Flexbox para organizar los elementos dentro del contenedor */
+    justify-content: center; /* Centra los elementos de manera horizontal dentro del contenedor */
+    align-items: center; /* Centra los elementos de manera vertical dentro del contenedor */
+}
+
+.square span:nth-child(1) {
+    position: absolute; /* Posiciona el primer círculo de forma absoluta dentro del contenedor .square */
+    top: 0; /* Alinea el círculo al borde superior del contenedor */
+    left: 0; /* Alinea el círculo al borde izquierdo del contenedor */
+    width: 100%; /* Hace que el círculo ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que el círculo ocupe toda la altura del contenedor */
+    border: 2px solid black; /* Aplica un borde negro de 2px al círculo */
+    border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%; /* Aplica una forma ovalada al borde del círculo (border-radius) */
+    transition: 0.5s; /* Añade una transición suave de 0.5 segundos para los cambios en el círculo */
+    animation: animate 6s linear infinite; /* Aplica una animación de rotación (animate) que dura 6 segundos, se repite infinitamente */
+}
+
+.circulo:hover span:nth-child(1) {
+    border: none; /* Elimina el borde del círculo cuando el mouse pasa por encima */
+    background: #01253c; /* Cambia el color de fondo del círculo cuando el mouse pasa por encima */
+}
+
+.square span:nth-child(2) {
+    position: absolute; /* Posiciona el segundo círculo de forma absoluta dentro del contenedor .square */
+    top: 0; /* Alinea el círculo al borde superior del contenedor */
+    left: 0; /* Alinea el círculo al borde izquierdo del contenedor */
+    width: 100%; /* Hace que el círculo ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que el círculo ocupe toda la altura del contenedor */
+    border: 2px solid black; /* Aplica un borde negro de 2px al círculo */
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; /* Aplica una forma ovalada distinta al borde del círculo */
+    transition: 0.5s; /* Añade una transición suave de 0.5 segundos para los cambios en el círculo */
+    animation: animate 4s linear infinite; /* Aplica una animación de rotación (animate) que dura 4 segundos, se repite infinitamente */
+}
+
+.circulo:hover span:nth-child(2) {
+    border: none; /* Elimina el borde del círculo cuando el mouse pasa por encima */
+    background: #025c94; /* Cambia el color de fondo del círculo cuando el mouse pasa por encima */
+}
+
+.square span:nth-child(3) {
+    position: absolute; /* Posiciona el tercer círculo de forma absoluta dentro del contenedor .square */
+    top: 0; /* Alinea el círculo al borde superior del contenedor */
+    left: 0; /* Alinea el círculo al borde izquierdo del contenedor */
+    width: 100%; /* Hace que el círculo ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que el círculo ocupe toda la altura del contenedor */
+    border: 2px solid black; /* Aplica un borde negro de 2px al círculo */
+    border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%; /* Aplica una forma ovalada distinta al borde del círculo */
+    transition: 0.5s; /* Añade una transición suave de 0.5 segundos para los cambios en el círculo */
+    animation: animate2 10s linear infinite; /* Aplica una animación de rotación (animate2) que dura 10 segundos, se repite infinitamente */
+}
+
+.circulo:hover span:nth-child(3) {
+    border: none; /* Elimina el borde del círculo cuando el mouse pasa por encima */
+    background: #84cdfa; /* Cambia el color de fondo del círculo cuando el mouse pasa por encima */
+}
+
+.content {
+    position: relative; /* Posiciona el contenedor de contenido de forma relativa para poder usar posiciones absolutas en sus hijos */
+    padding: 40px 60px; /* Añade un padding de 40px arriba y abajo, y 60px a los lados */
+    color: #fff; /* Establece el color de texto blanco para el contenido */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    transition: 0.5s; /* Añade una transición suave de 0.5 segundos para los cambios en el contenido */
+    z-index: 1000; /* Asegura que el contenido esté por encima de otros elementos (si es necesario) */
+}
+
+.content a {
+    position: relative; /* Posiciona los enlaces de manera relativa dentro del contenedor .content */
+    display: inline-block; /* Los enlaces se muestran en línea, pero pueden tener propiedades de bloque */
+    margin-top: 10px; /* Añade un margen superior de 10px a los enlaces */
+    border: 2px solid #fff; /* Añade un borde blanco de 2px a los enlaces */
+    padding: 6px 18px; /* Añade padding de 6px en la parte superior e inferior, y 18px a los lados */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Establece el color de texto blanco para los enlaces */
+    font-weight: 600; /* Aplica un peso de fuente seminegrita a los enlaces */
+    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%; /* Aplica bordes redondeados al enlace, creando una forma elíptica */
+}
+
+.content a:hover {
+    background: white; /* Cambia el fondo del enlace a blanco cuando el mouse pasa por encima */
+    color: #333; /* Cambia el color del texto a gris oscuro cuando el mouse pasa por encima */
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg); /* Al inicio de la animación, el círculo no rota */
+    }
+    100% {
+        transform: rotate(360deg); /* Al final de la animación, el círculo gira 360 grados */
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg); /* Al inicio de la animación, el círculo está girado 360 grados */
+    }
+    100% {
+        transform: rotate(0deg); /* Al final de la animación, el círculo vuelve a su posición original */
+    }
+}
+
+@media (max-width: 768px) {
+    .form-signin {
+        width: 80%; /* Reduce el ancho del formulario al 80% en pantallas pequeñas */
+    }
+
+    .userInput {
+        grid-template-columns: 1fr; /* Apila los elementos en una sola columna en pantallas pequeñas */
+        margin-bottom: 10px; /* Reduce el margen inferior entre los elementos */
+    }
+
+    #botonSesion {
+        width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
+    }
+
+    .mb-4 {
+        width: 120px; /* Ajusta el tamaño del logo en pantallas pequeñas */
+    }
+
+    .square {
+        max-width: 550px; /* Reduce el tamaño máximo del círculo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        padding-top: 50px; /* Reduce el espacio superior en pantallas aún más pequeñas */
+    }
+
+    .form-signin {
+        width: 90%; /* Ajusta el ancho del formulario al 90% en pantallas muy pequeñas */
+    }
+
+    .square {
+        max-width: 500px; /* Reduce aún más el tamaño máximo del círculo en pantallas muy pequeñas */
+    }
+
+    .userInput {
+        grid-template-columns: 1fr; /* Los inputs se apilan en una sola columna */
+    }
+
+    .mb-4 {
+        width: 100px; /* Ajusta el tamaño del logo para pantallas muy pequeñas */
+    }
+
+    #botonSesion {
+        padding: 10px; /* Añade un padding al botón en pantallas pequeñas */
+    }
+}
+
+.alert-danger {
+    color: #cc0f22;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
